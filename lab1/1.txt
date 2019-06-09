@@ -1,0 +1,44 @@
+1
+
+
+a = float(input("введите а: "))
+b = float(input("введите b: "))
+c = float(input("введите c: "))
+k = float(input("введите k: "))
+if (a == 0) or (b == 0):
+    print("Знаменатель должен быть отличен от нуля")
+elif a+b+c*(k-a/(b*b*b)) == 0:
+    print("Знаменатель должен быть отличен от нуля")
+else:
+    ans = ((a*a)/(b*b)+c*c*a*a)/(a+b+c*(k-a/(b*b*b)))+c+(k/b-k/a)*c
+    if ans < 0:
+        ans = -ans
+    print("Ответ:", ans)
+
+2
+
+
+spisoc = [slovo for slovo in input("Введите элементы списка в строку через \
+пробел\n").split()]
+i = len(spisoc)
+chetspisoc = spisoc[1:i:2]
+print(chetspisoc)
+
+
+3
+
+
+spisoc = [int(i) for i in input("Введите список из числовых  \
+элементов :\n").split()]
+s = 0
+for i in range(1, len(spisoc)):
+    if spisoc[i] > 10:
+        s = spisoc[i]+s
+print("Сумма элементов > 10 равна :\n", s)
+
+
+
+4
+
+spisoc = [int(i) for i in input("Введите список числовых элементов :\n").split()]
+print("Максимальный элемент списка равен :\n", max(spisoc))
